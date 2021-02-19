@@ -25,7 +25,7 @@ count = dict()
 for line in file:
     if line.startswith('From '):
         line = line.split()
-        # Following line set key of the dictionary as email id (from index position 1) and value as 0 if first occurance or increment count if count is not 0
+        # Following line set key of the dictionary as email id (from index position 1) and value as 0 if first occurance or increment count if not first occurance
         count[line[1]] = count.get(line[1], 0) + 1
 
 for key,value in count.items():
